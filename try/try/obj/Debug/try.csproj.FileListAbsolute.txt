@@ -1,0 +1,7 @@
+C:\Users\ondra\OneDrive\Plocha\EA.7\try\try\bin\Debug\@try.exe.config
+C:\Users\ondra\OneDrive\Plocha\EA.7\try\try\bin\Debug\@try.exe
+C:\Users\ondra\OneDrive\Plocha\EA.7\try\try\bin\Debug\@try.pdb
+C:\Users\ondra\OneDrive\Plocha\EA.7\try\try\obj\Debug\try.csproj.AssemblyReference.cache
+C:\Users\ondra\OneDrive\Plocha\EA.7\try\try\obj\Debug\try.csproj.CoreCompileInputs.cache
+C:\Users\ondra\OneDrive\Plocha\EA.7\try\try\obj\Debug\@try.exe
+C:\Users\ondra\OneDrive\Plocha\EA.7\try\try\obj\Debug\@try.pdb

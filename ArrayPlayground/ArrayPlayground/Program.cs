@@ -89,7 +89,7 @@ namespace ArrayPlayground
             }
             if (!foundNumber)
             {
-                Console.WriteLine("cislo v poli neni");
+                Console.WriteLine("cislo v poli neni\n");
             }
             //TODO 8: Přepiš pole na úplně nové tak, že bude obsahovat 100 náhodně vygenerovaných čísel od 0 do 9.
             Random rng = new Random();
@@ -97,17 +97,33 @@ namespace ArrayPlayground
             for (int i = 0; i < myArray.Length; i++)
             {
                 myArray[i] = rng.Next(0,10);
+                Console.Write(myArray[i] + ", ");
             }
+
 
 
             //TODO 9: Spočítej kolikrát se každé číslo v poli vyskytuje a spočítané četnosti vypiš do konzole.
             int[] counts = new int[10];
-
-
+            foreach (int number in myArray)
+            {
+                counts[number]++;
+            }
+            for (int i = 0; i < counts.Length; i++)
+            {
+                Console.WriteLine("cetnost cislice " + i + " je " + counts[i]);
+            }
 
             //TODO 10: Vytvoř druhé pole, do kterého zkopíruješ prvky z prvního pole v opačném pořadí.
+            int[] reversedArray = new int[100];
 
+            for(int i = 0;i < reversedArray.Length; i++)
+            {
+                reversedArray[i] = myArray[myArray.Length-1-i];
+                Console.Write(reversedArray[i] + ", ");
+            }
 
+            //nebo reversedArray = myArray
+            //reversedArray.Reversed();
 
 
             //Zkus is dál hrát s polem dle své libosti. Můžeš třeba prohodit dva prvky, ukládat do pole prvky nějaké posloupnosti (a pak si je vyhledávat) nebo cokoliv dalšího tě napadne

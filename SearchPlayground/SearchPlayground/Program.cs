@@ -39,25 +39,15 @@ namespace SearchPlayground
              */
             int downIndex = 0;
             int upIndex = array.Length -1;
-            int middleIndex;
 
-            if (elementToSearch == downIndex)
-                return downIndex;
-            else if (elementToSearch == upIndex)
-                return upIndex;
-
-            if (downIndex != upIndex)
+            while (downIndex!= upIndex)
             {
-             middleIndex = (upIndex + downIndex) / 2;
-                if (elementToSearch == middleIndex)
-                    return middleIndex;
-                if (elementToSearch < middleIndex)
-                    upIndex = middleIndex;
-                else if (elementToSearch > middleIndex)
-                    downIndex = middleIndex;
-
+                int midpoint = (downIndex + upIndex) / 2;
+                if (array[midpoint] == elementToSearch) return midpoint;
+                else if (array[midpoint] < elementToSearch) downIndex = midpoint + 1;
+                else upIndex = midpoint -1;
             }
-          
+
 
             return -1;
         }
@@ -65,7 +55,19 @@ namespace SearchPlayground
         static int BinarySearchRecursive(int[] array, int elementToSearch, int lower, int upper)
         {
             //TODO naimplementuj binární vyhledávání rekurzivním způsobem (Zamysli se nad parametry, které tato funkce přijímá vzpomeň si na přístup Rozděl a Panuj.)
-            return -1;
+
+            int midPoint = (upper + lower) / 2;
+            if (array[midPoint] == elementToSearch)
+                return midPoint;
+            else if (array[midPoint] < elementToSearch)
+                return BinarySearchRecursive(array, elementToSearch, midPoint + 1, upper);
+            else
+                return BinarySearchRecursive(array, elementToSearch, lower, midPoint - 1);
+
+            
+                
+            
+            
         }
 
         //Naplní pole náhodnými rostoucími čísly.

@@ -18,8 +18,20 @@ namespace SortingPlayground
         static int[] BubbleSort(int[] array)
         {
             int[] sortedArray = (int[])array.Clone(); // Řaď v tomto poli, ve kterém je výchoze zkopírováno všechno ze vstupního pole.
-            
+            int x;
+            for (int i = 0; i < sortedArray.Length-1; i++)
+            {
 
+                if (sortedArray[i] > sortedArray[i+1])
+                {
+                    x = sortedArray[i];
+                    sortedArray[i] = sortedArray[i+1];
+                    sortedArray[i + 1] = x;
+                    
+                    //Array.Sort(sortedArray);
+                }
+
+            }
 
             return sortedArray;
         }

@@ -19,29 +19,25 @@ namespace SortingPlayground
         {
             int[] sortedArray = (int[])array.Clone(); // Řaď v tomto poli, ve kterém je výchoze zkopírováno všechno ze vstupního pole.
             int x;
-            for (int i = 0; i < sortedArray.Length-1; i++)
+            for (int i = 0; i < sortedArray.Length - 1; i++)
             {
-
-                if (sortedArray[i] > sortedArray[i+1])
+                for (int j = 0; j < sortedArray.Length - i - 1; j++)
                 {
-                    x = sortedArray[i];
-                    sortedArray[i] = sortedArray[i+1];
-                    sortedArray[i + 1] = x;
-                    
-                    //Array.Sort(sortedArray);
+                    if (sortedArray[j] > sortedArray[j + 1])
+                    {
+                        x = sortedArray[j];
+                        sortedArray[j] = sortedArray[j + 1];
+                        sortedArray[j + 1] = x;
+                    }
                 }
-
             }
-
             return sortedArray;
         }
 
         static int[] SelectionSort(int[] array)
         {
             int[] sortedArray = (int[])array.Clone(); // Řaď v tomto poli, ve kterém je výchoze zkopírováno všechno ze vstupního pole.
-            /*
-             * TODO: Naimplementuj selection sort.
-             */
+            
             return sortedArray;
         }
 

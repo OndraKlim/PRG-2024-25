@@ -9,38 +9,124 @@ namespace ConsoleApp1
 {
     internal class Program
     {
-        static void Print2DArray(int[,] arrayToPrint )
+        static void PrintArray(string[,] arrayToPrint)
         {
-            
-            char[] chars = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' };
-            Console.WriteLine("  1 2 3 4 5 6 7 8 9 10");
+            Console.WriteLine("   a b c d e f g h i j");
             for (int i = 0; i < arrayToPrint.GetLength(0); i++)
             {
-                Console.Write(chars[i] + " ");
-
-
-
-                for (int j = 0; j < arrayToPrint.GetLength(1); j++)
-                {
-
-                    Console.Write(arrayToPrint[i, j] + " ");
-                }
-                Console.WriteLine();
+                if (i == 9) 
+                    Console.Write(i + 1 + " "); 
+                else 
+                    Console.Write(i + 1 + "  ");
+                for (int j = 0; j < arrayToPrint.GetLength(1); j++) Console.Write(arrayToPrint[i, j] + " ");
+                    Console.WriteLine();
             }
             Console.WriteLine();
         }
 
-        static void Reset2DArray(int[,] arrayToReset)
+        static void PlayerPlacement(string[,] playerPlacementArray)
         {
-            for (int i = 0; i < arrayToReset.GetLength(0); i++)
+            List<string> columns = new List<string> { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j" };
+            List<string> shipTypes = new List<string> { "Torpedoborec", "Ponorka", "Kriznik", "Bitevni", "Letadlova" };
+            List<string> shipTypesLetters = new List<string> { "T", "P", "K", "B", "L" };
+
+            bool redo;
+            for (int i = 0; i < shipTypes.Count; i++)
             {
-                for (int j = 0; j < arrayToReset.GetLength(1); j++)
+                do
                 {
-                    arrayToReset[i, j] = i * 0 + j * 0;
+                    redo = false;
+                    try
+                    {
+                        Console.WriteLine(shipTypes[i]);
+                        int shipIndex = i;
+                        Console.WriteLine("Urcete si souradnice pro umisteni prvniho bodu vasi lode");
+                        Console.WriteLine("Napiste radek 1 az 10");
+                        int xCoordinate = int.Parse(Console.ReadLine()) - 1;
+                        Console.WriteLine("Napiste sloupec a az j");
+                        int yCoordinate = columns.IndexOf(Console.ReadLine());
+                        Console.WriteLine("Napiste smer orientace lode (U - up; D - down; L - left; R - right)");
+                        string ShipDirection = Console.ReadLine();
+                        switch (ShipDirection)
+                        {
+                            case "U":
+                                for (int j = 0; j < shipIndex + 1; j++)
+                                {
+                                    if (shipTypesLetters.Contains(playerPlacementArray[xCoordinate - j - 1, yCoordinate]))
+                                    {
+                                        Console.WriteLine("Lodě nemohou ležet přes sebe!");
+                                        redo = true;
+                                    }
+                                }
+                                if (redo == false)
+                                {
+                                    for (int j = 0; j < shipIndex + 1; j++)
+                                        playerPlacementArray[xCoordinate - 1 - j, yCoordinate] = shipTypesLetters[shipIndex];
+                                }
+                                break;
+                            case "R":
+                                for (int j = 0; j < shipIndex + 1; j++)
+                                {
+                                    if (shipTypesLetters.Contains(playerPlacementArray[xCoordinate, yCoordinate + 1 + j]))
+                                    {
+                                        Console.WriteLine("Lodě nemohou ležet přes sebe!");
+                                        redo = true;
+                                    }
+                                }
+                                if (redo == false)
+                                {
+                                    for (int j = 0; j < shipIndex + 1; j++)
+                                        playerPlacementArray[xCoordinate, yCoordinate + 1 + j] = shipTypesLetters[shipIndex];
+                                }
+                                break;
+                            case "D":
+                                for (int j = 0; j < shipIndex + 1; j++)
+                                {
+                                    if (shipTypesLetters.Contains(playerPlacementArray[xCoordinate + 1 + j, yCoordinate]))
+                                    {
+                                        Console.WriteLine("Lodě nemohou ležet přes sebe!");
+                                        redo = true;
+                                    }
+                                }
+                                if (redo == false)
+                                {
+                                    for (int j = 0; j < shipIndex + 1; j++)
+                                        playerPlacementArray[xCoordinate + 1 + j, yCoordinate] = shipTypesLetters[shipIndex];
+                                }
+                                break;
+                            case "L":
+                                for (int j = 0; j < shipIndex + 1; j++)
+                                {
+                                    if (shipTypesLetters.Contains(playerPlacementArray[xCoordinate, yCoordinate - 1 - j]))
+                                    {
+                                        Console.WriteLine("Lodě nemohou ležet přes sebe!");
+                                        redo = true;
+                                    }
+                                }
+                                if (redo == false)
+                                {
+                                    for (int j = 0; j < shipIndex + 1; j++)
+                                        playerPlacementArray[xCoordinate, yCoordinate - 1 - j] = shipTypesLetters[shipIndex];
+                                }
+                                break;
+                            default:
+                                Console.WriteLine("Chyba zadavani");
+                                redo = true;
+                                break;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("error");
+                        redo = true;
+                    }
                 }
+                while (redo);
+                PrintArray(playerPlacementArray);
             }
+            
         }
-        static void PrintRules()
+            static void PrintRules()
         {
             Console.WriteLine("PRAVIDLA PRO HRU LODE");
             Console.WriteLine("Pole velikosti 10x10 poli, kdy svisle hodnoty jsou oznaceny pismeny a-j, vodorovne hodnoty cisly 1-10");
@@ -49,23 +135,7 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            int[,] array = new int[10, 10];
-            Reset2DArray(array);
-            Print2DArray(array);
             PrintRules();
-
-
-
-
-
-
-            string input = Console.ReadLine();
-            char firstChar = input[0];
-            List<char> rows = new List<char> { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', };
-            int index = rows.IndexOf(firstChar);
-
-
-
             Console.ReadKey();
 
         }

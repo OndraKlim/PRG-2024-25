@@ -81,6 +81,10 @@ namespace ClassPlayground
             else if (rect.GetAspectRatio() <1) Console.WriteLine("Higher rectangle");
             else Console.WriteLine("Wider rectangle");
 
+            Console.WriteLine("zadej xovou souradnici bodu, u ktereho chces overit, zda lezi v obdelniku");
+            Console.WriteLine("zadej xovou souradnici bodu, u ktereho chces overit, zda lezi v obdelniku");
+            Console.ReadLine();
+
             Console.ReadKey();
         }
     }

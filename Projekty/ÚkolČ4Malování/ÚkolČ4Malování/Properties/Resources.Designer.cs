@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CalculatorRevisited.Properties {
+namespace ÚkolČ4Malování.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace CalculatorRevisited.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CalculatorRevisited.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ÚkolČ4Malování.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,12 +61,32 @@ namespace CalculatorRevisited.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] String1 {
+        internal static System.Drawing.Bitmap _20240331_152949 {
             get {
-                object obj = ResourceManager.GetObject("String1", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("20240331_152949", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngimg_com___circle_PNG63 {
+            get {
+                object obj = ResourceManager.GetObject("pngimg.com - circle_PNG63", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Square___black_simple_svg {
+            get {
+                object obj = ResourceManager.GetObject("Square_-_black_simple.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

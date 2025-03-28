@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 /*
  * Dnes bude vasim ukolem vytvorit formularovou reprezentaci kalkulacky. Priblizny vzhled si nakreslime na tabuli
@@ -40,6 +41,8 @@ namespace CalculatorRevisited
         public CalculatorRevisited()
         {
             InitializeComponent();
+            Graphics g = this.CreateGraphics();
+            g.FillEllipse(Brushes.Red, 50, 50, 20, 30);
         }
 
         private void buttonOne_Click(object sender, EventArgs e)
@@ -136,5 +139,7 @@ namespace CalculatorRevisited
             textBoxText.Text = "";
 
         }
+
+    
     }
 }

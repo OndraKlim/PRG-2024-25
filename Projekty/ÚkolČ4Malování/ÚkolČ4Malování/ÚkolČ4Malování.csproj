@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CE075CD9-6845-4145-84AC-10B0AD0AEC8E}</ProjectGuid>
+    <ProjectGuid>{E2FCE26C-D564-4E72-B555-2E4D602BCB0E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CalculatorRevisited</RootNamespace>
-    <AssemblyName>CalculatorRevisited</AssemblyName>
+    <RootNamespace>ÚkolČ4Malování</RootNamespace>
+    <AssemblyName>ÚkolČ4Malování</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculatorRevisited.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CalculatorRevisited.Designer.cs">
-      <DependentUpon>CalculatorRevisited.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CalculatorRevisited.resx">
-      <DependentUpon>CalculatorRevisited.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +79,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20240331_152949.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngimg.com - circle_PNG63.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Square_-_black_simple.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

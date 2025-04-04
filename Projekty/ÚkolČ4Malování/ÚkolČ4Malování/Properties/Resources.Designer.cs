@@ -73,6 +73,16 @@ namespace ÚkolČ4Malování.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cross_mark_emoji_clipart_xl {
+            get {
+                object obj = ResourceManager.GetObject("cross-mark-emoji-clipart-xl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngimg_com___circle_PNG63 {
             get {
                 object obj = ResourceManager.GetObject("pngimg.com - circle_PNG63", resourceCulture);

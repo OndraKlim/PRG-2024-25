@@ -41,8 +41,11 @@
             this.buttonBlue = new System.Windows.Forms.Button();
             this.buttonLightBlue = new System.Windows.Forms.Button();
             this.buttonGreen = new System.Windows.Forms.Button();
+            this.lineWidthMover = new System.Windows.Forms.NumericUpDown();
             this.buttonRectangle = new System.Windows.Forms.Button();
             this.buttonEllipse = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.lineWidthMover)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPaint
@@ -54,7 +57,9 @@
             this.panelPaint.Name = "panelPaint";
             this.panelPaint.Size = new System.Drawing.Size(1000, 575);
             this.panelPaint.TabIndex = 0;
+            this.panelPaint.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelPaint_MouseDown);
             this.panelPaint.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelPaint_MouseMove);
+            this.panelPaint.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelPaint_MouseUp);
             // 
             // buttonBlack
             // 
@@ -65,6 +70,7 @@
             this.buttonBlack.Size = new System.Drawing.Size(25, 25);
             this.buttonBlack.TabIndex = 1;
             this.buttonBlack.UseVisualStyleBackColor = false;
+            this.buttonBlack.Click += new System.EventHandler(this.buttonBlack_Click);
             // 
             // buttonLightGreen
             // 
@@ -75,6 +81,7 @@
             this.buttonLightGreen.Size = new System.Drawing.Size(25, 25);
             this.buttonLightGreen.TabIndex = 2;
             this.buttonLightGreen.UseVisualStyleBackColor = false;
+            this.buttonLightGreen.Click += new System.EventHandler(this.buttonLightGreen_Click);
             // 
             // buttonYellow
             // 
@@ -85,6 +92,7 @@
             this.buttonYellow.Size = new System.Drawing.Size(25, 25);
             this.buttonYellow.TabIndex = 3;
             this.buttonYellow.UseVisualStyleBackColor = false;
+            this.buttonYellow.Click += new System.EventHandler(this.buttonYellow_Click);
             // 
             // buttonOrange
             // 
@@ -95,6 +103,7 @@
             this.buttonOrange.Size = new System.Drawing.Size(25, 25);
             this.buttonOrange.TabIndex = 4;
             this.buttonOrange.UseVisualStyleBackColor = false;
+            this.buttonOrange.Click += new System.EventHandler(this.buttonOrange_Click);
             // 
             // buttonRed
             // 
@@ -105,6 +114,7 @@
             this.buttonRed.Size = new System.Drawing.Size(25, 25);
             this.buttonRed.TabIndex = 5;
             this.buttonRed.UseVisualStyleBackColor = false;
+            this.buttonRed.Click += new System.EventHandler(this.buttonRed_Click);
             // 
             // buttonDarkRed
             // 
@@ -115,6 +125,7 @@
             this.buttonDarkRed.Size = new System.Drawing.Size(25, 25);
             this.buttonDarkRed.TabIndex = 6;
             this.buttonDarkRed.UseVisualStyleBackColor = false;
+            this.buttonDarkRed.Click += new System.EventHandler(this.buttonDarkRed_Click);
             // 
             // buttonBrown
             // 
@@ -125,6 +136,7 @@
             this.buttonBrown.Size = new System.Drawing.Size(25, 25);
             this.buttonBrown.TabIndex = 7;
             this.buttonBrown.UseVisualStyleBackColor = false;
+            this.buttonBrown.Click += new System.EventHandler(this.buttonBrown_Click);
             // 
             // buttonGray
             // 
@@ -135,6 +147,7 @@
             this.buttonGray.Size = new System.Drawing.Size(25, 25);
             this.buttonGray.TabIndex = 8;
             this.buttonGray.UseVisualStyleBackColor = false;
+            this.buttonGray.Click += new System.EventHandler(this.buttonGray_Click);
             // 
             // buttonPurple
             // 
@@ -145,6 +158,7 @@
             this.buttonPurple.Size = new System.Drawing.Size(25, 25);
             this.buttonPurple.TabIndex = 9;
             this.buttonPurple.UseVisualStyleBackColor = false;
+            this.buttonPurple.Click += new System.EventHandler(this.buttonPurple_Click);
             // 
             // buttonBlue
             // 
@@ -155,6 +169,7 @@
             this.buttonBlue.Size = new System.Drawing.Size(25, 25);
             this.buttonBlue.TabIndex = 10;
             this.buttonBlue.UseVisualStyleBackColor = false;
+            this.buttonBlue.Click += new System.EventHandler(this.buttonBlue_Click);
             // 
             // buttonLightBlue
             // 
@@ -165,6 +180,7 @@
             this.buttonLightBlue.Size = new System.Drawing.Size(25, 25);
             this.buttonLightBlue.TabIndex = 11;
             this.buttonLightBlue.UseVisualStyleBackColor = false;
+            this.buttonLightBlue.Click += new System.EventHandler(this.buttonLightBlue_Click);
             // 
             // buttonGreen
             // 
@@ -175,6 +191,25 @@
             this.buttonGreen.Size = new System.Drawing.Size(25, 25);
             this.buttonGreen.TabIndex = 12;
             this.buttonGreen.UseVisualStyleBackColor = false;
+            this.buttonGreen.Click += new System.EventHandler(this.buttonGreen_Click);
+            // 
+            // lineWidthMover
+            // 
+            this.lineWidthMover.Location = new System.Drawing.Point(920, 12);
+            this.lineWidthMover.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.lineWidthMover.Name = "lineWidthMover";
+            this.lineWidthMover.Size = new System.Drawing.Size(92, 26);
+            this.lineWidthMover.TabIndex = 15;
+            this.lineWidthMover.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.lineWidthMover.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // buttonRectangle
             // 
@@ -202,11 +237,28 @@
             this.buttonEllipse.TabIndex = 13;
             this.buttonEllipse.UseVisualStyleBackColor = true;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.cross_mark_emoji_clipart_xl;
+            this.buttonClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClear.ForeColor = System.Drawing.Color.White;
+            this.buttonClear.Image = global::ÚkolČ4Malování.Properties.Resources.cross_mark_emoji_clipart_xl;
+            this.buttonClear.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.buttonClear.Location = new System.Drawing.Point(959, 55);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(55, 55);
+            this.buttonClear.TabIndex = 17;
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // FormMalovani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 689);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.lineWidthMover);
             this.Controls.Add(this.buttonRectangle);
             this.Controls.Add(this.buttonEllipse);
             this.Controls.Add(this.buttonGreen);
@@ -224,6 +276,7 @@
             this.Controls.Add(this.panelPaint);
             this.Name = "FormMalovani";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.lineWidthMover)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,6 +298,8 @@
         private System.Windows.Forms.Button buttonGreen;
         private System.Windows.Forms.Button buttonEllipse;
         private System.Windows.Forms.Button buttonRectangle;
+        private System.Windows.Forms.NumericUpDown lineWidthMover;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 

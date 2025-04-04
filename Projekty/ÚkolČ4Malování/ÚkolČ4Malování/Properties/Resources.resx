@@ -127,4 +127,7 @@
   <data name="Square_-_black_simple.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Square_-_black_simple.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cross-mark-emoji-clipart-xl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross-mark-emoji-clipart-xl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

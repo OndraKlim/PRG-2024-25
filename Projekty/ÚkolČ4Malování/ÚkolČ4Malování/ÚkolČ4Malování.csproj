@@ -89,5 +89,8 @@
   <ItemGroup>
     <None Include="Resources\Square_-_black_simple.svg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-mark-emoji-clipart-xl.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

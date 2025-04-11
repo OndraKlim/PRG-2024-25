@@ -104,5 +104,8 @@
   <ItemGroup>
     <None Include="Resources\Straight_Line.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraserrgb_p.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

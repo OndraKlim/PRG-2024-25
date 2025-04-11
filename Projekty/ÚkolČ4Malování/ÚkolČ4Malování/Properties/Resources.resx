@@ -127,19 +127,22 @@
   <data name="pngimg.com - circle_PNG63" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngimg.com - circle_PNG63.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="20240331_152949" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20240331_152949.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cross-mark-emoji-clipart-xl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cross-mark-emoji-clipart-xl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="20240331_152949" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20240331_152949.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Straight_Line" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Straight_Line.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fillRectangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fillRectangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Straight_Line" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Straight_Line.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eraserrgb_p" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eraserrgb_p.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

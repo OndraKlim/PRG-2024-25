@@ -43,7 +43,6 @@
             this.buttonGreen = new System.Windows.Forms.Button();
             this.lineWidthMover = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonEraser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,10 +50,17 @@
             this.buttonFillEllipse = new System.Windows.Forms.Button();
             this.buttonFillRectangle = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.buttonEraser = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonDrawRectangle = new System.Windows.Forms.Button();
             this.buttonDrawEllipse = new System.Windows.Forms.Button();
+            this.buttonText = new System.Windows.Forms.Button();
+            this.textBoxText = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lineWidthMover)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPaint
@@ -229,17 +235,6 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "size:";
             // 
-            // buttonEraser
-            // 
-            this.buttonEraser.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonEraser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEraser.Location = new System.Drawing.Point(156, 15);
-            this.buttonEraser.Name = "buttonEraser";
-            this.buttonEraser.Size = new System.Drawing.Size(25, 25);
-            this.buttonEraser.TabIndex = 19;
-            this.buttonEraser.UseVisualStyleBackColor = false;
-            this.buttonEraser.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -274,7 +269,7 @@
             this.buttonDrawLine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDrawLine.ForeColor = System.Drawing.Color.White;
             this.buttonDrawLine.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.buttonDrawLine.Location = new System.Drawing.Point(254, 12);
+            this.buttonDrawLine.Location = new System.Drawing.Point(255, 12);
             this.buttonDrawLine.Name = "buttonDrawLine";
             this.buttonDrawLine.Size = new System.Drawing.Size(40, 40);
             this.buttonDrawLine.TabIndex = 26;
@@ -323,6 +318,18 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // buttonEraser
+            // 
+            this.buttonEraser.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.eraserrgb_p;
+            this.buttonEraser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonEraser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEraser.Location = new System.Drawing.Point(144, 15);
+            this.buttonEraser.Name = "buttonEraser";
+            this.buttonEraser.Size = new System.Drawing.Size(40, 40);
+            this.buttonEraser.TabIndex = 19;
+            this.buttonEraser.UseVisualStyleBackColor = false;
+            this.buttonEraser.Click += new System.EventHandler(this.button1_Click);
+            // 
             // buttonClear
             // 
             this.buttonClear.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.cross_mark_emoji_clipart_xl;
@@ -366,11 +373,80 @@
             this.buttonDrawEllipse.UseVisualStyleBackColor = true;
             this.buttonDrawEllipse.Click += new System.EventHandler(this.buttonEllipse_Click);
             // 
+            // buttonText
+            // 
+            this.buttonText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonText.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonText.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F);
+            this.buttonText.ForeColor = System.Drawing.Color.Black;
+            this.buttonText.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.buttonText.Location = new System.Drawing.Point(301, 12);
+            this.buttonText.Name = "buttonText";
+            this.buttonText.Size = new System.Drawing.Size(40, 40);
+            this.buttonText.TabIndex = 27;
+            this.buttonText.Text = "Text";
+            this.buttonText.UseVisualStyleBackColor = true;
+            this.buttonText.Click += new System.EventHandler(this.buttonText_Click);
+            // 
+            // textBoxText
+            // 
+            this.textBoxText.Location = new System.Drawing.Point(408, 19);
+            this.textBoxText.Name = "textBoxText";
+            this.textBoxText.Size = new System.Drawing.Size(100, 26);
+            this.textBoxText.TabIndex = 28;
+            this.textBoxText.TextChanged += new System.EventHandler(this.textBoxText_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(363, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 20);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Text:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(607, 19);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            72,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(100, 26);
+            this.numericUpDown1.TabIndex = 30;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged_1);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(523, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 20);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Font size:";
+            // 
             // FormMalovani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 689);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBoxText);
+            this.Controls.Add(this.buttonText);
             this.Controls.Add(this.buttonDrawLine);
             this.Controls.Add(this.buttonFillEllipse);
             this.Controls.Add(this.buttonFillRectangle);
@@ -399,6 +475,7 @@
             this.Controls.Add(this.panelPaint);
             this.Name = "FormMalovani";
             ((System.ComponentModel.ISupportInitialize)(this.lineWidthMover)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,6 +509,11 @@
         private System.Windows.Forms.Button buttonFillRectangle;
         private System.Windows.Forms.Button buttonFillEllipse;
         private System.Windows.Forms.Button buttonDrawLine;
+        private System.Windows.Forms.Button buttonText;
+        private System.Windows.Forms.TextBox textBoxText;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label6;
     }
 }
 

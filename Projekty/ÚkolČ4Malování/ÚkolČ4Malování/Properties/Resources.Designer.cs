@@ -83,6 +83,16 @@ namespace ÚkolČ4Malování.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eraserrgb_p {
+            get {
+                object obj = ResourceManager.GetObject("eraserrgb_p", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fillEllipse {
             get {
                 object obj = ResourceManager.GetObject("fillEllipse", resourceCulture);

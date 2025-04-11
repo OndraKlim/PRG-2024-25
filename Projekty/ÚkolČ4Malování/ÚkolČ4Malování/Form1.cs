@@ -17,14 +17,14 @@ namespace ÚkolČ4Malování
         Color currentColor = Color.Black;
         float lineWidth = 2;
         Point startPoint;
-        
-        
+        static float fontSize = 16;
+        string textToDraw = string.Empty;
         public FormMalovani()
         {
             InitializeComponent();
         }
 
-        enum DrawingMode { FreeDraw, drawRectangle, drawEllipse, fillRectangle, fillEllipse, drawLine }
+        enum DrawingMode { FreeDraw, drawRectangle, drawEllipse, fillRectangle, fillEllipse, drawLine, writeText }
         DrawingMode currentMode = DrawingMode.FreeDraw;
 
         private void panelPaint_MouseDown(object sender, MouseEventArgs e)
@@ -56,6 +56,7 @@ namespace ÚkolČ4Malování
         {
             isDrawing = false;
 
+
             if (currentMode == DrawingMode.drawRectangle || currentMode == DrawingMode.drawEllipse)
             {
                 Graphics g = panelPaint.CreateGraphics();
@@ -75,7 +76,7 @@ namespace ÚkolČ4Malování
 
                 g.Dispose();
             }
-            if (currentMode == DrawingMode.drawLine)
+            else if (currentMode == DrawingMode.drawLine)
             {
                 Graphics g = panelPaint.CreateGraphics();
                 Pen pen = new Pen(currentColor, lineWidth);
@@ -83,7 +84,7 @@ namespace ÚkolČ4Malování
                 g.Dispose();
             }
 
-            if (currentMode == DrawingMode.fillRectangle || currentMode == DrawingMode.fillEllipse)
+            else if (currentMode == DrawingMode.fillRectangle || currentMode == DrawingMode.fillEllipse)
             {
                 Graphics g = panelPaint.CreateGraphics();
                 Brush brush = new SolidBrush (currentColor);
@@ -99,8 +100,18 @@ namespace ÚkolČ4Malování
                     g.FillRectangle(brush, rect);
                 else if (currentMode == DrawingMode.fillEllipse)
                     g.FillEllipse(brush, rect);
+                
 
                 g.Dispose();
+            }
+
+            else if (currentMode == DrawingMode.writeText)
+            {
+                Graphics g = panelPaint.CreateGraphics();
+                Brush brush = new SolidBrush(currentColor);
+                string textToDraw = textBoxText.Text;
+                Font font = new Font("Arial", fontSize);
+                g.DrawString(textToDraw, font, brush, startPoint.X, startPoint.Y);
             }
         }
         private void buttonBlack_Click(object sender, EventArgs e)
@@ -139,7 +150,10 @@ namespace ÚkolČ4Malování
         private void buttonPurple_Click(object sender, EventArgs e)
         {currentColor = Color.Purple;}
         private void button1_Click(object sender, EventArgs e)
-        { currentColor = Color.WhiteSmoke;}
+        {
+            currentMode = DrawingMode.FreeDraw;
+            currentColor = Color.WhiteSmoke;
+        }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
@@ -181,6 +195,19 @@ namespace ÚkolČ4Malování
         private void buttonDrawLine_Click(object sender, EventArgs e)
         {
             currentMode = DrawingMode.drawLine;
+        }
+
+        private void buttonText_Click(object sender, EventArgs e)
+        {currentMode = DrawingMode.writeText;}
+
+        private void textBoxText_TextChanged(object sender, EventArgs e)
+        {
+            textToDraw = textBoxText.Text;
+        }
+
+        private void numericUpDown1_ValueChanged_1(object sender, EventArgs e)
+        {
+            fontSize = (float)numericUpDown1.Value;
         }
     }
 }

@@ -42,9 +42,18 @@
             this.buttonLightBlue = new System.Windows.Forms.Button();
             this.buttonGreen = new System.Windows.Forms.Button();
             this.lineWidthMover = new System.Windows.Forms.NumericUpDown();
-            this.buttonRectangle = new System.Windows.Forms.Button();
-            this.buttonEllipse = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonEraser = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonDrawLine = new System.Windows.Forms.Button();
+            this.buttonFillEllipse = new System.Windows.Forms.Button();
+            this.buttonFillRectangle = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonDrawRectangle = new System.Windows.Forms.Button();
+            this.buttonDrawEllipse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lineWidthMover)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,9 +62,9 @@
             this.panelPaint.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelPaint.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelPaint.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.panelPaint.Location = new System.Drawing.Point(12, 121);
+            this.panelPaint.Location = new System.Drawing.Point(12, 132);
             this.panelPaint.Name = "panelPaint";
-            this.panelPaint.Size = new System.Drawing.Size(1000, 575);
+            this.panelPaint.Size = new System.Drawing.Size(1000, 564);
             this.panelPaint.TabIndex = 0;
             this.panelPaint.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelPaint_MouseDown);
             this.panelPaint.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelPaint_MouseMove);
@@ -211,31 +220,108 @@
             0});
             this.lineWidthMover.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // buttonRectangle
+            // label1
             // 
-            this.buttonRectangle.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.Square___black_simple_svg;
-            this.buttonRectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonRectangle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRectangle.ForeColor = System.Drawing.Color.White;
-            this.buttonRectangle.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.buttonRectangle.Location = new System.Drawing.Point(172, 62);
-            this.buttonRectangle.Name = "buttonRectangle";
-            this.buttonRectangle.Size = new System.Drawing.Size(40, 40);
-            this.buttonRectangle.TabIndex = 14;
-            this.buttonRectangle.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(877, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 20);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "size:";
             // 
-            // buttonEllipse
+            // buttonEraser
             // 
-            this.buttonEllipse.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.pngimg_com___circle_PNG63;
-            this.buttonEllipse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonEllipse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEllipse.ForeColor = System.Drawing.Color.White;
-            this.buttonEllipse.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.buttonEllipse.Location = new System.Drawing.Point(172, 15);
-            this.buttonEllipse.Name = "buttonEllipse";
-            this.buttonEllipse.Size = new System.Drawing.Size(40, 40);
-            this.buttonEllipse.TabIndex = 13;
-            this.buttonEllipse.UseVisualStyleBackColor = true;
+            this.buttonEraser.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonEraser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEraser.Location = new System.Drawing.Point(156, 15);
+            this.buttonEraser.Name = "buttonEraser";
+            this.buttonEraser.Size = new System.Drawing.Size(25, 25);
+            this.buttonEraser.TabIndex = 19;
+            this.buttonEraser.UseVisualStyleBackColor = false;
+            this.buttonEraser.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(48, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Colors";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(140, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 20);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Eraser";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(224, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 20);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Shapes";
+            // 
+            // buttonDrawLine
+            // 
+            this.buttonDrawLine.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.Straight_Line;
+            this.buttonDrawLine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonDrawLine.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDrawLine.ForeColor = System.Drawing.Color.White;
+            this.buttonDrawLine.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.buttonDrawLine.Location = new System.Drawing.Point(254, 12);
+            this.buttonDrawLine.Name = "buttonDrawLine";
+            this.buttonDrawLine.Size = new System.Drawing.Size(40, 40);
+            this.buttonDrawLine.TabIndex = 26;
+            this.buttonDrawLine.UseVisualStyleBackColor = true;
+            this.buttonDrawLine.Click += new System.EventHandler(this.buttonDrawLine_Click);
+            // 
+            // buttonFillEllipse
+            // 
+            this.buttonFillEllipse.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.fillEllipse;
+            this.buttonFillEllipse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonFillEllipse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonFillEllipse.ForeColor = System.Drawing.Color.White;
+            this.buttonFillEllipse.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.buttonFillEllipse.Location = new System.Drawing.Point(346, 62);
+            this.buttonFillEllipse.Name = "buttonFillEllipse";
+            this.buttonFillEllipse.Size = new System.Drawing.Size(40, 40);
+            this.buttonFillEllipse.TabIndex = 25;
+            this.buttonFillEllipse.UseVisualStyleBackColor = true;
+            this.buttonFillEllipse.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // buttonFillRectangle
+            // 
+            this.buttonFillRectangle.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.fillRectangle;
+            this.buttonFillRectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonFillRectangle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonFillRectangle.ForeColor = System.Drawing.Color.White;
+            this.buttonFillRectangle.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.buttonFillRectangle.Location = new System.Drawing.Point(300, 62);
+            this.buttonFillRectangle.Name = "buttonFillRectangle";
+            this.buttonFillRectangle.Size = new System.Drawing.Size(40, 40);
+            this.buttonFillRectangle.TabIndex = 24;
+            this.buttonFillRectangle.UseVisualStyleBackColor = true;
+            this.buttonFillRectangle.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.pen;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button2.Location = new System.Drawing.Point(208, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 40);
+            this.button2.TabIndex = 22;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonClear
             // 
@@ -252,15 +338,52 @@
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // buttonDrawRectangle
+            // 
+            this.buttonDrawRectangle.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.Square___black_simple_svg;
+            this.buttonDrawRectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonDrawRectangle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDrawRectangle.ForeColor = System.Drawing.Color.White;
+            this.buttonDrawRectangle.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.buttonDrawRectangle.Location = new System.Drawing.Point(208, 62);
+            this.buttonDrawRectangle.Name = "buttonDrawRectangle";
+            this.buttonDrawRectangle.Size = new System.Drawing.Size(40, 40);
+            this.buttonDrawRectangle.TabIndex = 14;
+            this.buttonDrawRectangle.UseVisualStyleBackColor = true;
+            this.buttonDrawRectangle.Click += new System.EventHandler(this.buttonRectangle_Click);
+            // 
+            // buttonDrawEllipse
+            // 
+            this.buttonDrawEllipse.BackgroundImage = global::ÚkolČ4Malování.Properties.Resources.pngimg_com___circle_PNG63;
+            this.buttonDrawEllipse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonDrawEllipse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDrawEllipse.ForeColor = System.Drawing.Color.White;
+            this.buttonDrawEllipse.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.buttonDrawEllipse.Location = new System.Drawing.Point(254, 61);
+            this.buttonDrawEllipse.Name = "buttonDrawEllipse";
+            this.buttonDrawEllipse.Size = new System.Drawing.Size(40, 40);
+            this.buttonDrawEllipse.TabIndex = 13;
+            this.buttonDrawEllipse.UseVisualStyleBackColor = true;
+            this.buttonDrawEllipse.Click += new System.EventHandler(this.buttonEllipse_Click);
+            // 
             // FormMalovani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 689);
+            this.Controls.Add(this.buttonDrawLine);
+            this.Controls.Add(this.buttonFillEllipse);
+            this.Controls.Add(this.buttonFillRectangle);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.buttonEraser);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.lineWidthMover);
-            this.Controls.Add(this.buttonRectangle);
-            this.Controls.Add(this.buttonEllipse);
+            this.Controls.Add(this.buttonDrawRectangle);
+            this.Controls.Add(this.buttonDrawEllipse);
             this.Controls.Add(this.buttonGreen);
             this.Controls.Add(this.buttonLightBlue);
             this.Controls.Add(this.buttonBlue);
@@ -275,9 +398,9 @@
             this.Controls.Add(this.buttonBlack);
             this.Controls.Add(this.panelPaint);
             this.Name = "FormMalovani";
-            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.lineWidthMover)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -296,10 +419,19 @@
         private System.Windows.Forms.Button buttonBlue;
         private System.Windows.Forms.Button buttonLightBlue;
         private System.Windows.Forms.Button buttonGreen;
-        private System.Windows.Forms.Button buttonEllipse;
-        private System.Windows.Forms.Button buttonRectangle;
+        private System.Windows.Forms.Button buttonDrawEllipse;
+        private System.Windows.Forms.Button buttonDrawRectangle;
         private System.Windows.Forms.NumericUpDown lineWidthMover;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonEraser;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonFillRectangle;
+        private System.Windows.Forms.Button buttonFillEllipse;
+        private System.Windows.Forms.Button buttonDrawLine;
     }
 }
 

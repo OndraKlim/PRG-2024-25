@@ -83,6 +83,36 @@ namespace ÚkolČ4Malování.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fillEllipse {
+            get {
+                object obj = ResourceManager.GetObject("fillEllipse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fillRectangle {
+            get {
+                object obj = ResourceManager.GetObject("fillRectangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pen {
+            get {
+                object obj = ResourceManager.GetObject("pen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngimg_com___circle_PNG63 {
             get {
                 object obj = ResourceManager.GetObject("pngimg.com - circle_PNG63", resourceCulture);
@@ -96,6 +126,16 @@ namespace ÚkolČ4Malování.Properties {
         internal static System.Drawing.Bitmap Square___black_simple_svg {
             get {
                 object obj = ResourceManager.GetObject("Square_-_black_simple.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Straight_Line {
+            get {
+                object obj = ResourceManager.GetObject("Straight_Line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
